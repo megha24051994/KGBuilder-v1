@@ -6520,7 +6520,7 @@ webvowl.app =
 	      } else {
 	        // throw warnign
 	        graph.options().warningModule().showWarning("Already seen this class",
-	          "Input IRI: " + url + " for element: " + element.labelForCurrentLanguage() + " already been set",
+	           element.labelForCurrentLanguage() + " already been set",
 	          "Restoring previous IRI for Element : " + element.iri(), 2, false, sanityCheckResult);
 	        
 	        editSidebar.updateSelectionInformation(element);
@@ -6532,7 +6532,7 @@ webvowl.app =
 	      sanityCheckResult = editSidebar.checkProperIriChange(element, url);
 	      if ( sanityCheckResult !== false ) {
 	        graph.options().warningModule().showWarning("Already seen this property",
-	          "Input IRI: " + url + " for element: " + element.labelForCurrentLanguage() + " already been set",
+	           element.labelForCurrentLanguage() + " already been set",
 	          "Restoring previous IRI for Element : " + element.iri(), 1, false, sanityCheckResult);
 	        
 	        editSidebar.updateSelectionInformation(element);
@@ -6687,7 +6687,7 @@ webvowl.app =
 	              sanityCheckResult = editSidebar.checkProperIriChange(element, url);
 	              if ( sanityCheckResult !== false ) {
 	                graph.options().warningModule().showWarning("Already seen this property",
-	                  "Input IRI: " + url + " for element: " + element.labelForCurrentLanguage() + " already been set",
+	                   element.labelForCurrentLanguage() + " already been set",
 	                  "Continuing with duplicate property!", 1, false, sanityCheckResult);
 	                editSidebar.updateSelectionInformation(element);
 	                return;
@@ -6698,7 +6698,7 @@ webvowl.app =
 	              sanityCheckResult = graph.checkIfIriClassAlreadyExist(url);
 	              if ( sanityCheckResult !== false ) {
 	                graph.options().warningModule().showWarning("Already seen this Class",
-	                  "Input IRI: " + url + " for element: " + element.labelForCurrentLanguage() + " already been set",
+	                   element.labelForCurrentLanguage() + " already been set",
 	                  "Restoring previous IRI for Element : " + element.iri(), 2, false, sanityCheckResult);
 	                
 	                editSidebar.updateSelectionInformation(element);
@@ -6722,7 +6722,7 @@ webvowl.app =
 	                sanityCheckResult = editSidebar.checkProperIriChange(element, url);
 	                if ( sanityCheckResult !== false ) {
 	                  graph.options().warningModule().showWarning("Already seen this property",
-	                    "Input IRI: " + url + " for element: " + element.labelForCurrentLanguage() + " already been set",
+	                     element.labelForCurrentLanguage() + " already been set",
 	                    "Continuing with duplicate property!", 1, false, sanityCheckResult);
 	                  
 	                  editSidebar.updateSelectionInformation(element);
@@ -6734,7 +6734,7 @@ webvowl.app =
 	                sanityCheckResult = graph.checkIfIriClassAlreadyExist(url);
 	                if ( sanityCheckResult !== false ) {
 	                  graph.options().warningModule().showWarning("Already seen this Class",
-	                    "Input IRI: " + url + " for element: " + element.labelForCurrentLanguage() + " already been set",
+	                     element.labelForCurrentLanguage() + " already been set",
 	                    "Restoring previous IRI for Element : " + element.iri(), 2, false, sanityCheckResult);
 	                  
 	                  editSidebar.updateSelectionInformation(element);
