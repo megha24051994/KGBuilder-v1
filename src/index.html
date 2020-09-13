@@ -2209,7 +2209,7 @@ ______________________*/
           xhr.onreadystatechange = function () {
             if (xhr.readyState == 4 && xhr.status == 200) {
               let data = JSON.parse(xhr.response);
-
+              console.clear();
               setObjectInnerHtml(label, data, prop);
             }
             running -= 1;

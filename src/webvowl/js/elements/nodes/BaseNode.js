@@ -221,7 +221,7 @@ module.exports = (function (){
             } else {
               // throw warnign
               graph.options().warningModule().showWarning("Already seen this class",
-                "Input IRI: " + backupFullIri + " for element: " + that.labelForCurrentLanguage() + " already been set",
+                "Input IRI for element: " + that.labelForCurrentLanguage() + " already been set",
                 "Restoring previous IRI for Element : " + that.iri(), 2, false, sanityCheckResult);
               
             }

@@ -826,11 +826,11 @@ module.exports = (function (){
           if ( backupFullIri ) {
             // console.log("Checking if element is Identical ?");
             var sanityCheckResult = graph.options().editSidebar().checkProperIriChange(that, backupFullIri);
-            if ( sanityCheckResult !== false ) {
+            /*if ( sanityCheckResult !== false ) {
               graph.options().warningModule().showWarning("Already seen this property",
-                "Input IRI: " + backupFullIri + " for element: " + that.labelForCurrentLanguage() + " already been set",
+                "Input IRI: for element: " + that.labelForCurrentLanguage() + " already been set",
                 "Continuing with duplicate property!", 1, false, sanityCheckResult);
-            }
+            }*/
             that.iri(backupFullIri);
           }
           graph.options().focuserModule().handle(undefined);

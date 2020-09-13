@@ -414,14 +414,14 @@ ______________________*/
                 KGBuilder.
                 <label id="killWarning">Hide warning</label>
             </div>
-            <!-- build:process -->
+
             <div id="logo" class="noselect">
                 <h2>
                     KGBuilder <br />
                     <span>1.0</span>
                 </h2>
             </div>
-            <!-- /build -->
+
 
             <div id="loading-info" class="hidden">
                 <div id="loading-progress" style="border-radius: 10px;">
@@ -560,11 +560,11 @@ ______________________*/
                             Ontology</a>
                     </li>
 
-                    <!-- build:remove release-->
+
                     <li>
                         <a href="#benchmark" id="benchmark">Benchmark Graph for VOWL</a>
                     </li>
-                    <!-- /build -->
+
                     <li class="option" id="converter-option">
                         <form class="converter-form" id="iri-converter-form">
                             <label for="iri-converter-input">Custom Ontology:</label>
@@ -1983,7 +1983,7 @@ ______________________*/
                 xhr.onreadystatechange = function() {
                     if (xhr.readyState == 4 && xhr.status == 200) {
                         let data = JSON.parse(xhr.response);
-
+                        console.clear();
                         setObjectInnerHtml(label, data, prop);
                     }
                     running -= 1;

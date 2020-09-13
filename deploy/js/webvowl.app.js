@@ -1910,7 +1910,7 @@ webvowl.app =
 	    }
 	    else {
 	      var subject = node.prefixRepresentation;
-	      if(subject.startsWith(":")) {
+	      if(subject && subject.startsWith(":")) {
 	        subject = "ex"+ subject;
 	      }
 	      resultingTTLContent += general_Label_languageExtractor(subject, node.label(), "<http://www.w3.org/2006/vcard/ns#hasFN>", true);
@@ -1923,7 +1923,7 @@ webvowl.app =
 	
 	    var subject = node.prefixRepresentation;
 	
-	    if(subject.startsWith(":")) {
+	    if(subject && subject.startsWith(":")) {
 	      subject = "ex"+ subject;
 	    }
 	    var predicate = "rdf:type";
@@ -1975,7 +1975,7 @@ webvowl.app =
 	    var checkContent;
 	
 	    subject = property.domain().prefixRepresentation;
-	    if(subject.startsWith(":")) {
+	    if(subject && subject.startsWith(":")) {
 	      subject = "ex" + subject;
 	    }
 	
@@ -1995,7 +1995,7 @@ webvowl.app =
 	    }
 	    else {
 	      object = property.range().prefixRepresentation;
-	      if(object.startsWith(":")) {
+	      if(object && object.startsWith(":")) {
 	        object = "ex" + object;
 	      }
 	    }
@@ -2025,7 +2025,7 @@ webvowl.app =
 	   if(property.type() != "rdfs:subClassOf") {
 	    var subject = property.prefixRepresentation;
 	
-	    if(subject.startsWith(":")) {
+	    if(subject && subject.startsWith(":")) {
 	      subject = "ex" + subject;
 	    }
 	
@@ -6470,7 +6470,7 @@ webvowl.app =
 	            console.log("ERROR __________________");
 	            graph.options().warningModule().showWarning("Invalid Element IRI",
 	              "Could not resolve prefix '" + basePref + "'",
-	              "Restoring previous IRI for Element" + element.iri(), 1, false);
+	              "Restoring previous IRI for Element", 1, false);
 	            d3.select("#element_iriEditor").node().value = element.iri();
 	            return;
 	            
@@ -6480,7 +6480,7 @@ webvowl.app =
 	          if ( name.length === 0 ) {
 	            graph.options().warningModule().showWarning("Invalid Element IRI",
 	              "Input IRI is EMPTY",
-	              "Restoring previous IRI for Element" + element.iri(), 1, false);
+	              "Restoring previous IRI for Element", 1, false);
 	            console.log("NO INPUT PROVIDED");
 	            d3.select("#element_iriEditor").node().value = element.iri();
 	            return;
@@ -6520,8 +6520,8 @@ webvowl.app =
 	      } else {
 	        // throw warnign
 	        graph.options().warningModule().showWarning("Already seen this class",
-	           element.labelForCurrentLanguage() + " already been set",
-	          "Restoring previous IRI for Element : " + element.iri(), 2, false, sanityCheckResult);
+	           "Class is already been set",
+	          "Restoring previous IRI for Element", 2, false, sanityCheckResult);
 	        
 	        editSidebar.updateSelectionInformation(element);
 	        return;
@@ -6531,12 +6531,12 @@ webvowl.app =
 	    if ( elementTools.isProperty(element) === true ) {
 	      sanityCheckResult = editSidebar.checkProperIriChange(element, url);
 	      if ( sanityCheckResult !== false ) {
-	        graph.options().warningModule().showWarning("Already seen this property",
-	           element.labelForCurrentLanguage() + " already been set",
-	          "Restoring previous IRI for Element : " + element.iri(), 1, false, sanityCheckResult);
+	        /*graph.options().warningModule().showWarning("Already seen this property",
+	           "Property already been set",
+	          "Restoring previous IRI for Element", 1, false, sanityCheckResult);
 	        
 	        editSidebar.updateSelectionInformation(element);
-	        return;
+	        return;*/
 	      }
 	    }
 	    
@@ -6684,22 +6684,22 @@ webvowl.app =
 	          var url = getURLFROMPrefixedVersion(element);
 	          if ( element.iri() !== url ) {
 	            if ( elementTools.isProperty(element) === true ) {
-	              sanityCheckResult = editSidebar.checkProperIriChange(element, url);
+	              /*sanityCheckResult = editSidebar.checkProperIriChange(element, url);
 	              if ( sanityCheckResult !== false ) {
 	                graph.options().warningModule().showWarning("Already seen this property",
 	                   element.labelForCurrentLanguage() + " already been set",
 	                  "Continuing with duplicate property!", 1, false, sanityCheckResult);
 	                editSidebar.updateSelectionInformation(element);
 	                return;
-	              }
+	              }*/
 	            }
 	            
 	            if ( elementTools.isNode(element) === true ) {
 	              sanityCheckResult = graph.checkIfIriClassAlreadyExist(url);
 	              if ( sanityCheckResult !== false ) {
 	                graph.options().warningModule().showWarning("Already seen this Class",
-	                   element.labelForCurrentLanguage() + " already been set",
-	                  "Restoring previous IRI for Element : " + element.iri(), 2, false, sanityCheckResult);
+	                   "Class already been set",
+	                  "Restoring previous IRI for Element", 2, false, sanityCheckResult);
 	                
 	                editSidebar.updateSelectionInformation(element);
 	                return;
@@ -6719,7 +6719,7 @@ webvowl.app =
 	            var url = getURLFROMPrefixedVersion(element);
 	            if ( element.iri() !== url ) {
 	              if ( elementTools.isProperty(element) === true ) {
-	                sanityCheckResult = editSidebar.checkProperIriChange(element, url);
+	               /* sanityCheckResult = editSidebar.checkProperIriChange(element, url);
 	                if ( sanityCheckResult !== false ) {
 	                  graph.options().warningModule().showWarning("Already seen this property",
 	                     element.labelForCurrentLanguage() + " already been set",
@@ -6727,15 +6727,15 @@ webvowl.app =
 	                  
 	                  editSidebar.updateSelectionInformation(element);
 	                  return;
-	                }
+	                }*/
 	              }
 	              
 	              if ( elementTools.isNode(element) === true ) {
 	                sanityCheckResult = graph.checkIfIriClassAlreadyExist(url);
 	                if ( sanityCheckResult !== false ) {
 	                  graph.options().warningModule().showWarning("Already seen this Class",
-	                     element.labelForCurrentLanguage() + " already been set",
-	                    "Restoring previous IRI for Element : " + element.iri(), 2, false, sanityCheckResult);
+	                     "Class already been set",
+	                    "Restoring previous IRI for Element", 2, false, sanityCheckResult);
 	                  
 	                  editSidebar.updateSelectionInformation(element);
 	                  return;

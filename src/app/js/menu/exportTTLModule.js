@@ -158,7 +158,7 @@ module.exports = function ( graph ){
     }
     else {
       var subject = node.prefixRepresentation;
-      if(subject.startsWith(":")) {
+      if(subject && subject.startsWith(":")) {
         subject = "ex"+ subject;
       }
       resultingTTLContent += general_Label_languageExtractor(subject, node.label(), "<http://www.w3.org/2006/vcard/ns#hasFN>", true);
@@ -171,7 +171,7 @@ module.exports = function ( graph ){
 
     var subject = node.prefixRepresentation;
 
-    if(subject.startsWith(":")) {
+    if(subject && subject.startsWith(":")) {
       subject = "ex"+ subject;
     }
     var predicate = "rdf:type";
@@ -223,7 +223,7 @@ module.exports = function ( graph ){
     var checkContent;
 
     subject = property.domain().prefixRepresentation;
-    if(subject.startsWith(":")) {
+    if(subject && subject.startsWith(":")) {
       subject = "ex" + subject;
     }
 
@@ -243,7 +243,7 @@ module.exports = function ( graph ){
     }
     else {
       object = property.range().prefixRepresentation;
-      if(object.startsWith(":")) {
+      if(object && object.startsWith(":")) {
         object = "ex" + object;
       }
     }
@@ -273,7 +273,7 @@ module.exports = function ( graph ){
    if(property.type() != "rdfs:subClassOf") {
     var subject = property.prefixRepresentation;
 
-    if(subject.startsWith(":")) {
+    if(subject && subject.startsWith(":")) {
       subject = "ex" + subject;
     }
 
