@@ -858,6 +858,7 @@ module.exports = function ( graphContainerSelector ){
         if(clickedProperty.type() !== "rdfs:subClassOf" && clickedProperty.type() !== "owl:DatatypeProperty"){	
           var modal = document.getElementById("myPropertyModal");	
           modal.style.display = "block";
+          document.getElementById("property-search-filter").focus();
           document.getElementById("property-search-results").innerHTML = "";	
           //Actual value before changing	
           var actualValue = document.getElementById("element_labelEditor").value;	

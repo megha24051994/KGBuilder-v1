@@ -46,27 +46,27 @@ webvowl.app =
 /***/ 0:
 /***/ (function(module, exports, __webpack_require__) {
 
-	__webpack_require__(319);
-	__webpack_require__(321);
+	__webpack_require__(316);
+	__webpack_require__(317);
 	
-	module.exports = __webpack_require__(322);
+	module.exports = __webpack_require__(318);
 
 
 /***/ }),
 
-/***/ 6:
+/***/ 3:
 /***/ (function(module, exports) {
 
 	module.exports = d3;
 
 /***/ }),
 
-/***/ 91:
+/***/ 88:
 /***/ (function(module, exports, __webpack_require__) {
 
-	var Symbol = __webpack_require__(92),
-	    getRawTag = __webpack_require__(95),
-	    objectToString = __webpack_require__(96);
+	var Symbol = __webpack_require__(89),
+	    getRawTag = __webpack_require__(92),
+	    objectToString = __webpack_require__(93);
 	
 	/** `Object#toString` result references. */
 	var nullTag = '[object Null]',
@@ -96,10 +96,10 @@ webvowl.app =
 
 /***/ }),
 
-/***/ 92:
+/***/ 89:
 /***/ (function(module, exports, __webpack_require__) {
 
-	var root = __webpack_require__(93);
+	var root = __webpack_require__(90);
 	
 	/** Built-in value references. */
 	var Symbol = root.Symbol;
@@ -109,10 +109,10 @@ webvowl.app =
 
 /***/ }),
 
-/***/ 93:
+/***/ 90:
 /***/ (function(module, exports, __webpack_require__) {
 
-	var freeGlobal = __webpack_require__(94);
+	var freeGlobal = __webpack_require__(91);
 	
 	/** Detect free variable `self`. */
 	var freeSelf = typeof self == 'object' && self && self.Object === Object && self;
@@ -125,7 +125,7 @@ webvowl.app =
 
 /***/ }),
 
-/***/ 94:
+/***/ 91:
 /***/ (function(module, exports) {
 
 	/* WEBPACK VAR INJECTION */(function(global) {/** Detect free variable `global` from Node.js. */
@@ -137,10 +137,10 @@ webvowl.app =
 
 /***/ }),
 
-/***/ 95:
+/***/ 92:
 /***/ (function(module, exports, __webpack_require__) {
 
-	var Symbol = __webpack_require__(92);
+	var Symbol = __webpack_require__(89);
 	
 	/** Used for built-in method references. */
 	var objectProto = Object.prototype;
@@ -190,7 +190,7 @@ webvowl.app =
 
 /***/ }),
 
-/***/ 96:
+/***/ 93:
 /***/ (function(module, exports) {
 
 	/** Used for built-in method references. */
@@ -219,11 +219,11 @@ webvowl.app =
 
 /***/ }),
 
-/***/ 103:
+/***/ 100:
 /***/ (function(module, exports, __webpack_require__) {
 
-	var baseGetTag = __webpack_require__(91),
-	    isObjectLike = __webpack_require__(104);
+	var baseGetTag = __webpack_require__(88),
+	    isObjectLike = __webpack_require__(101);
 	
 	/** `Object#toString` result references. */
 	var symbolTag = '[object Symbol]';
@@ -255,7 +255,7 @@ webvowl.app =
 
 /***/ }),
 
-/***/ 104:
+/***/ 101:
 /***/ (function(module, exports) {
 
 	/**
@@ -291,7 +291,7 @@ webvowl.app =
 
 /***/ }),
 
-/***/ 112:
+/***/ 109:
 /***/ (function(module, exports) {
 
 	/**
@@ -324,7 +324,7 @@ webvowl.app =
 
 /***/ }),
 
-/***/ 154:
+/***/ 151:
 /***/ (function(module, exports) {
 
 	/**
@@ -352,10 +352,10 @@ webvowl.app =
 
 /***/ }),
 
-/***/ 219:
+/***/ 216:
 /***/ (function(module, exports, __webpack_require__) {
 
-	var baseToString = __webpack_require__(220);
+	var baseToString = __webpack_require__(217);
 	
 	/**
 	 * Converts `value` to a string. An empty string is returned for `null`
@@ -387,13 +387,13 @@ webvowl.app =
 
 /***/ }),
 
-/***/ 220:
+/***/ 217:
 /***/ (function(module, exports, __webpack_require__) {
 
-	var Symbol = __webpack_require__(92),
-	    arrayMap = __webpack_require__(154),
-	    isArray = __webpack_require__(112),
-	    isSymbol = __webpack_require__(103);
+	var Symbol = __webpack_require__(89),
+	    arrayMap = __webpack_require__(151),
+	    isArray = __webpack_require__(109),
+	    isSymbol = __webpack_require__(100);
 	
 	/** Used as references for various `Number` constants. */
 	var INFINITY = 1 / 0;
@@ -431,14 +431,14 @@ webvowl.app =
 
 /***/ }),
 
-/***/ 319:
+/***/ 316:
 /***/ (function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ }),
 
-/***/ 321:
+/***/ 317:
 /***/ (function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(d3) {/* Taken from here: http://stackoverflow.com/a/17907562 */
@@ -504,11 +504,11 @@ webvowl.app =
 	
 	module.exports = showBrowserWarningIfRequired;
 	showBrowserWarningIfRequired();
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(6)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
 
 /***/ }),
 
-/***/ 322:
+/***/ 318:
 /***/ (function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(d3) {String.prototype.replaceAll = function ( search, replacement ){
@@ -523,24 +523,24 @@ webvowl.app =
 	    languageTools = webvowl.util.languageTools(),
 	    GRAPH_SELECTOR = "#graph",
 	    // Modules for the webvowl app
-	    exportMenu = __webpack_require__(323)(graph),
-	    filterMenu = __webpack_require__(325)(graph),
-	    gravityMenu = __webpack_require__(326)(graph),
-	    modeMenu = __webpack_require__(327)(graph),
-	    debugMenu = __webpack_require__(328)(graph),
-	    ontologyMenu = __webpack_require__(329)(graph),
-	    pauseMenu = __webpack_require__(333)(graph),
-	    resetMenu = __webpack_require__(334)(graph),
-	    searchMenu = __webpack_require__(335)(graph),
-	    navigationMenu = __webpack_require__(336)(graph),
-	    zoomSlider = __webpack_require__(337)(graph),
-	    sidebar = __webpack_require__(338)(graph),
-	    leftSidebar = __webpack_require__(339)(graph),
-	    editSidebar = __webpack_require__(340)(graph),
-	    configMenu = __webpack_require__(341)(graph),
-	    loadingModule = __webpack_require__(342)(graph),
-	    warningModule = __webpack_require__(343)(graph),
-	    directInputMod = __webpack_require__(344)(graph),
+	    exportMenu = __webpack_require__(319)(graph),
+	    filterMenu = __webpack_require__(321)(graph),
+	    gravityMenu = __webpack_require__(322)(graph),
+	    modeMenu = __webpack_require__(323)(graph),
+	    debugMenu = __webpack_require__(324)(graph),
+	    ontologyMenu = __webpack_require__(325)(graph),
+	    pauseMenu = __webpack_require__(329)(graph),
+	    resetMenu = __webpack_require__(330)(graph),
+	    searchMenu = __webpack_require__(331)(graph),
+	    navigationMenu = __webpack_require__(332)(graph),
+	    zoomSlider = __webpack_require__(333)(graph),
+	    sidebar = __webpack_require__(334)(graph),
+	    leftSidebar = __webpack_require__(335)(graph),
+	    editSidebar = __webpack_require__(336)(graph),
+	    configMenu = __webpack_require__(337)(graph),
+	    loadingModule = __webpack_require__(338)(graph),
+	    warningModule = __webpack_require__(339)(graph),
+	    directInputMod = __webpack_require__(340)(graph),
 	    
 	    
 	    // Graph modules
@@ -1122,11 +1122,11 @@ webvowl.app =
 	}
 	;
 	
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(6)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
 
 /***/ }),
 
-/***/ 323:
+/***/ 319:
 /***/ (function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(d3) {/**
@@ -1144,7 +1144,7 @@ webvowl.app =
 	    currentToFuseki,
 	    exportTurtleRDFButton;
 	  
-	  var exportTTLModule = __webpack_require__(324)(graph);
+	  var exportTTLModule = __webpack_require__(320)(graph);
 	  
 	  
 	  String.prototype.replaceAll = function ( search, replacement ){
@@ -1743,11 +1743,11 @@ webvowl.app =
 	  return exportMenu;
 	};
 	
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(6)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
 
 /***/ }),
 
-/***/ 324:
+/***/ 320:
 /***/ (function(module, exports) {
 
 	/**
@@ -2238,7 +2238,7 @@ webvowl.app =
 
 /***/ }),
 
-/***/ 325:
+/***/ 321:
 /***/ (function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(d3) {/**
@@ -2530,11 +2530,11 @@ webvowl.app =
 	  return filterMenu;
 	};
 	
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(6)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
 
 /***/ }),
 
-/***/ 326:
+/***/ 322:
 /***/ (function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(d3) {/**
@@ -2650,11 +2650,11 @@ webvowl.app =
 	  return gravityMenu;
 	};
 	
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(6)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
 
 /***/ }),
 
-/***/ 327:
+/***/ 323:
 /***/ (function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(d3) {/**
@@ -2914,11 +2914,11 @@ webvowl.app =
 	  return modeMenu;
 	};
 	
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(6)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
 
 /***/ }),
 
-/***/ 328:
+/***/ 324:
 /***/ (function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(d3) {module.exports = function ( graph ){
@@ -3071,14 +3071,14 @@ webvowl.app =
 	  return debugMenu;
 	};
 	
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(6)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
 
 /***/ }),
 
-/***/ 329:
+/***/ 325:
 /***/ (function(module, exports, __webpack_require__) {
 
-	/* WEBPACK VAR INJECTION */(function(d3) {var unescape = __webpack_require__(330);
+	/* WEBPACK VAR INJECTION */(function(d3) {var unescape = __webpack_require__(326);
 	
 	module.exports = function ( graph ){
 	  
@@ -3745,15 +3745,15 @@ webvowl.app =
 	  return ontologyMenu;
 	};
 	
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(6)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
 
 /***/ }),
 
-/***/ 330:
+/***/ 326:
 /***/ (function(module, exports, __webpack_require__) {
 
-	var toString = __webpack_require__(219),
-	    unescapeHtmlChar = __webpack_require__(331);
+	var toString = __webpack_require__(216),
+	    unescapeHtmlChar = __webpack_require__(327);
 	
 	/** Used to match HTML entities and HTML characters. */
 	var reEscapedHtml = /&(?:amp|lt|gt|quot|#39);/g,
@@ -3790,10 +3790,10 @@ webvowl.app =
 
 /***/ }),
 
-/***/ 331:
+/***/ 327:
 /***/ (function(module, exports, __webpack_require__) {
 
-	var basePropertyOf = __webpack_require__(332);
+	var basePropertyOf = __webpack_require__(328);
 	
 	/** Used to map HTML entities to characters. */
 	var htmlUnescapes = {
@@ -3818,7 +3818,7 @@ webvowl.app =
 
 /***/ }),
 
-/***/ 332:
+/***/ 328:
 /***/ (function(module, exports) {
 
 	/**
@@ -3839,7 +3839,7 @@ webvowl.app =
 
 /***/ }),
 
-/***/ 333:
+/***/ 329:
 /***/ (function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(d3) {/**
@@ -3910,11 +3910,11 @@ webvowl.app =
 	  return pauseMenu;
 	};
 	
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(6)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
 
 /***/ }),
 
-/***/ 334:
+/***/ 330:
 /***/ (function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(d3) {/**
@@ -3966,11 +3966,11 @@ webvowl.app =
 	  return resetMenu;
 	};
 	
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(6)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
 
 /***/ }),
 
-/***/ 335:
+/***/ 331:
 /***/ (function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(d3) {/**
@@ -4488,11 +4488,11 @@ webvowl.app =
 	  return searchMenu;
 	};
 	
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(6)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
 
 /***/ }),
 
-/***/ 336:
+/***/ 332:
 /***/ (function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(d3) {/**
@@ -4751,11 +4751,11 @@ webvowl.app =
 	  return navigationMenu;
 	};
 	
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(6)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
 
 /***/ }),
 
-/***/ 337:
+/***/ 333:
 /***/ (function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(d3) {/** The zoom Slider **/
@@ -4873,11 +4873,11 @@ webvowl.app =
 	  return zoomSlider;
 	};
 	
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(6)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
 
 /***/ }),
 
-/***/ 338:
+/***/ 334:
 /***/ (function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(d3) {/**
@@ -5484,11 +5484,11 @@ webvowl.app =
 	  return sidebar;
 	};
 	
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(6)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
 
 /***/ }),
 
-/***/ 339:
+/***/ 335:
 /***/ (function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(d3) {/**
@@ -5847,11 +5847,11 @@ webvowl.app =
 	  return leftSidebar;
 	};
 	
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(6)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
 
 /***/ }),
 
-/***/ 340:
+/***/ 336:
 /***/ (function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(d3) {/**
@@ -7202,11 +7202,11 @@ webvowl.app =
 	  return editSidebar;
 	};
 	
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(6)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
 
 /***/ }),
 
-/***/ 341:
+/***/ 337:
 /***/ (function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(d3) {module.exports = function ( graph ){
@@ -7343,11 +7343,11 @@ webvowl.app =
 	  return configMenu;
 	};
 	
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(6)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
 
 /***/ }),
 
-/***/ 342:
+/***/ 338:
 /***/ (function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(d3) {module.exports = function ( graph ){
@@ -8077,11 +8077,11 @@ webvowl.app =
 	
 	
 	
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(6)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
 
 /***/ }),
 
-/***/ 343:
+/***/ 339:
 /***/ (function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(d3) {module.exports = function ( graph ){
@@ -8516,11 +8516,11 @@ webvowl.app =
 	
 	
 	
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(6)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
 
 /***/ }),
 
-/***/ 344:
+/***/ 340:
 /***/ (function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(d3) {module.exports = function ( graph ){
@@ -8598,7 +8598,7 @@ webvowl.app =
 	
 	
 	
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(6)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
 
 /***/ })
 

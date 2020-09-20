@@ -1577,7 +1577,7 @@ ______________________*/
 
         xhr.open(
           "GET",
-          "http://data.bioontology.org/search?" + queryString,
+          "https://data.bioontology.org/search?" + queryString,
           true
         );
         xhr.send();
@@ -1982,7 +1982,7 @@ ______________________*/
           });
         });
 
-        // setupSideMenu();
+         //setupSideMenu();
       }
 
       function load(uri, sourceObject, wikiId) {
@@ -2089,7 +2089,7 @@ ______________________*/
                 r.kind.value == "2"
               ) {
                 // running +=1;
-                // this will add properties
+                // this will add datatype properties
                 // selected.datatype.push(obj);
                 // setTimeout(() => {
                 //     loadDatatype( obj.uri );
@@ -2122,7 +2122,7 @@ ______________________*/
                           selected.objects.push(obj);
                           loadObject(obj.uri);
                         } else {
-                          // this will add properties
+                          // this will add datatype properties
                           // selected.datatype.push(obj);
                           // loadDatatype(obj.uri);
                         }
@@ -2145,12 +2145,13 @@ ______________________*/
                   buildAndShowResults();
                 }, 2000);
               }
-            });
-            // sort();
+              /*   sort();
 
-            // setTimeout(() => {
-            //   // buildAndShowResults();
-            // }, 6000);
+             setTimeout(() => {
+                buildAndShowResults();
+             }, 2000);*/
+            }); 
+          
           }
         };
         xhr.send();
